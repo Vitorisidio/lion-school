@@ -1,0 +1,91 @@
+    /******************************** IMPORTS *****************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+    /******************************** CABEÇALHO *****************************/
+header {
+    height: 8.12vh;
+    width: 100vw;
+    background-color: #3347B0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 5.93vh;
+}
+
+.cabecalho-esquerdo {
+    display: flex;
+    margin-left: 6.7vw;
+
+    align-items: center;
+}
+
+.nome-escola {
+    font-size: 1.9vh;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    width: 75px;
+    padding-left: 11px;
+}
+
+.voltar{
+    height: 3.34vh;
+}
+
+.cabecalho-direito {
+    display: flex;
+    margin-right: 6.7vw;
+
+    align-items: center;
+}
+
+.sair {
+    font-size: 2.86vh;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    width: 75px;
+    padding-left: 11px;
+}
+
+    /******************************** MAIN *****************************/
+
+    main{
+        margin-top: 7.8vh;
+        margin-left: 6.67vw;
+        margin-right: 6.67vw;
+        background-color: rgb(214, 5, 5);
+
+        height: 36.66vh;
+        width: 86.7vw;
+
+    display: flex;
+    justify-content: space-between;
+    }
+    /******************************** ESQUERDO *****************************/
+    .titulo{
+        font-size: 4.55vh;
+        font-family: "Roboto", sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: lighter;
+        width: 31.5vw;
+    }
+
+    .titulo span{
+        color: #3347B0;
+        font-weight: bold;
+    }
+
+    .computadores{
+        margin-top: 42px;
+        height: 20.73vh;
+    }
+
+    /******************************** DIREITO *****************************/
+
+    .botao{
+        display: flex;
+    }
