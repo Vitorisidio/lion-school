@@ -1,0 +1,94 @@
+    /******************************** IMPORTS *****************************/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+    .aba-filtros {
+        width: 100vw;
+        height: 5.9vh;
+        background-color: #BCC2E5;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .status {
+        font-family: "Roboto", sans-serif;
+
+        font-size: 1.12vw;
+        color: #3347B0;
+        font-weight: 500;
+
+        margin-left: 6.68vw;
+
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .opcoes {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 6.6vw;
+
+        width: 10.43vw;
+        max-height: 15vh;
+
+        background: #3347B0;
+        color: white;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .opcoes.mostrar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opcoes p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.12vw;
+
+        padding: 1vh 1.7vw;
+        margin: 0;
+
+        cursor: pointer;
+    }
+
+    .opcoes p:hover {
+        background-color: #4A5FC1;
+    }
+
+    .legenda {
+        display: flex;
+        font-family: "Roboto", sans-serif;
+
+        font-size: 1.12vw;
+        color: #3347B0;
+        font-weight: 500;
+
+        margin-right: 6.68vw;
+
+        background: none;
+        border: none;
+    }
+
+    .bloco{
+        display: flex;
+        margin-left: 24px;
+        margin-right: 8px;
+
+        background-color: #3347B0;
+        box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.5);
+        width: 20px;
+        height: 20px;
+    }
+
+    .bloco-amarelo{
+        background-color: #E5B657;
+    }

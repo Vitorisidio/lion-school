@@ -1,91 +1,157 @@
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+
     /******************************** IMPORTS *****************************/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
     /******************************** CABEÇALHO *****************************/
-header {
-    height: 8.12vh;
-    width: 100vw;
-    background-color: #3347B0;
+    header {
+        height: 8.12vh;
+        width: 100vw;
+        background-color: #3347B0;
 
-    display: flex;
-    justify-content: space-between;
-}
+        display: flex;
+        justify-content: space-between;
+    }
 
-.logo {
-    height: 5.93vh;
-}
+    .logo {
+        height: 5.93vh;
+    }
 
-.cabecalho-esquerdo {
-    display: flex;
-    margin-left: 6.7vw;
+    .cabecalho-esquerdo {
+        display: flex;
+        margin-left: 6.7vw;
 
-    align-items: center;
-}
+        align-items: center;
+    }
 
-.nome-escola {
-    font-size: 1.9vh;
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    color: white;
-    width: 75px;
-    padding-left: 11px;
-}
+    .nome-escola {
+        font-size: 1.9vh;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        width: 75px;
+        padding-left: 11px;
+    }
 
-.voltar{
-    height: 3.34vh;
-}
+    .voltar {
+        height: 3.34vh;
+    }
 
-.cabecalho-direito {
-    display: flex;
-    margin-right: 6.7vw;
+    .cabecalho-direito {
+        display: flex;
+        margin-right: 6.7vw;
 
-    align-items: center;
-}
+        align-items: center;
+    }
 
-.sair {
-    font-size: 2.86vh;
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    color: white;
-    width: 75px;
-    padding-left: 11px;
-}
+    .sair {
+        font-size: 2.86vh;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        width: 75px;
+        padding-left: 11px;
+    }
 
     /******************************** MAIN *****************************/
 
-    main{
-        margin-top: 7.8vh;
-        margin-left: 6.67vw;
-        margin-right: 6.67vw;
-        background-color: rgb(214, 5, 5);
-
-        height: 36.66vh;
-        width: 86.7vw;
-
-    display: flex;
-    justify-content: space-between;
-    }
-    /******************************** ESQUERDO *****************************/
-    .titulo{
-        font-size: 4.55vh;
-        font-family: "Roboto", sans-serif;
-        color: rgb(0, 0, 0);
-        font-weight: lighter;
-        width: 31.5vw;
+    main {
+        flex: 1;
+        width: 100%;
     }
 
-    .titulo span{
-        color: #3347B0;
-        font-weight: bold;
-    }
+    /******************************** FOOTER *****************************/
+    footer {
+        background-color: #3347B0;
 
-    .computadores{
-        margin-top: 42px;
-        height: 20.73vh;
-    }
-
-    /******************************** DIREITO *****************************/
-
-    .botao{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /******************************** FOOTER ESQUERDO *****************************/
+
+    .rodape-esquerdo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 22px;
+        margin-left: 116px;
+        margin-bottom: 24px;
+        gap: 1vh;
+    }
+
+
+    .telefone,
+    .email,
+    .gps {
+        display: flex;
+        align-items: center;
+    }
+
+    .telefone img,
+    .email img,
+    .gps img {
+        height: 2.92vh;
+        width: 1.75vw;
+    }
+
+    .telefone p,
+    .email p,
+    .gps p {
+        font-size: 1.87vh;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        padding-left: 1.67vw;
+    }
+
+    /******************************** FOOTER MEIO *****************************/
+
+    .rodape-meio {
+        font-size: 1.87vh;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        padding-left: 1.67vw;
+    }
+
+    /******************************** FOOTER DIREITO *****************************/
+
+    .rodape-direito {
+        display: flex;
+        gap: 1.4vw;
+        align-items: center;
+        margin-top: 45px;
+        margin-right: 116px;
+        margin-bottom: 47px;
+
+    }
+
+    .rede-social {
+        width: 3.34vw;
+        height: 5.6vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 2px solid white;
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    .rede-social img {
+        max-width: 55%;
+        max-height: 55%;
+        width: auto;
+        height: auto;
     }

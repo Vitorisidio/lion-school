@@ -1,0 +1,93 @@
+    /******************************** IMPORTS *****************************/
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+    /******************************** ESQUERDO *****************************/
+
+  .main-home{
+                
+        margin-top: 7.8vh;
+        margin-left: 6.67vw;
+        margin-right: 6.67vw;
+
+        height: 53.88vh;
+        width: 86.7vw;
+
+        display: flex;
+        justify-content: space-between;
+  }
+  
+  /******************************** ESQUERDO *****************************/
+    .titulo {
+        font-size: calc(2.5vw + 3.27vh);
+        font-family: "Roboto", sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: lighter;
+        width: 33.15vw;
+    }
+
+    .titulo span {
+        color: #3347B0;
+        font-weight: bold;
+    }
+
+    .computadores {
+        margin-top: 4.66vh;
+        height: 30.7vh;
+        width: 30.3vw;
+    }
+
+    /******************************** MEIO *****************************/
+    .estudante {
+        width: 17.85vw;
+        height: 49.674vh;
+        margin-top: 12px;
+
+    }
+
+    /******************************** DIREITO *****************************/
+
+    .botao-ds,
+    .botao-redes {
+        display: flex;
+        width: 27.8vw;
+        height: 23.4vh;
+        background-color: #3347B0;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 12px 12px 4px 0 rgba(51, 71, 176, 0.5);
+        border: 1px solid black;
+
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .botao-redes {
+        margin-top: 5.55vh;
+    }
+
+    .botao-ds:hover,
+    .botao-redes:hover {
+        transform: scale(1.05);
+    }
+
+    .botao-ds:active,
+    .botao-redes:active {
+        transform: scale(0.95);
+    }
+
+    .botao-ds img,
+    .botao-redes img {
+        width: 6.66vw;
+        height: 8.98vh;
+    }
+
+    .botao-ds p,
+    .botao-redes p {
+        font-size:  4.44vw;
+        font-weight: 500;
+        padding-left: 1.7vw;
+        font-family: "Roboto", sans-serif;
+        color: white;
+    }
+
