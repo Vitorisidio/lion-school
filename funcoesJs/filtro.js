@@ -1,66 +1,70 @@
 'use strict'
 
 
-export function dropDown(botao) {
+export function dropDown(dropdown, botao, alterarFiltro) {
 
-    const div = document.createElement("div");
-    div.classList.add("dropdown");
 
     const opcoes = document.createElement("div");
-    opcoes.classList.add("opcoes");
+    opcoes.classList.add("opcoes")
 
-    const status = document.createElement("p");
-    status.textContent = "status";
+    const todos = document.createElement("p");
+    todos.textContent = "Todos"
 
     const finalizado = document.createElement("p");
-    finalizado.textContent = "Finalizado";
+    finalizado.textContent = "Finalizado"
 
     const cursando = document.createElement("p");
-    cursando.textContent = "Cursando";
+    cursando.textContent = "Cursando"
 
 
     opcoes.append(
-        status,
+        todos,
         finalizado,
         cursando
     )
 
+    dropdown.append(opcoes)
 
     // abre e fecha opções
+
     botao.addEventListener("click", () => {
 
         opcoes.classList.toggle("mostrar")
 
-    });
-    
-    status.addEventListener("click", () => {
-        botao.textContent = "Status";
-        opcoes.classList.remove("mostrar");
-    });
+    })
 
     // troca o texto do botão
+
+    todos.addEventListener("click", () => {
+
+        botao.textContent = "Todos"
+
+        alterarFiltro(null)
+
+        opcoes.classList.remove("mostrar")
+
+    })
+
     finalizado.addEventListener("click", () => {
 
-        botao.textContent = "Finalizado";
+        botao.textContent = "Finalizado"
 
-        opcoes.classList.remove("mostrar");
+        alterarFiltro("finalizado");
 
-    });
+        opcoes.classList.remove("mostrar")
+
+    })
 
 
     cursando.addEventListener("click", () => {
 
-        botao.textContent = "Cursando";
+        botao.textContent = "Cursando"
 
-        opcoes.classList.remove("mostrar");
+        alterarFiltro("cursando");
 
-    });
+        opcoes.classList.remove("mostrar")
 
-    div.append(
-        botao,
-        opcoes
-    );
-    
-    return div;
+    })
+
 
 }

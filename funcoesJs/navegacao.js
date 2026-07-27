@@ -1,23 +1,25 @@
-import { criarHome } from "../criacaoTelaJs/home.js";
-import { criarTurma } from "../criacaoTelaJs/turma.js";
-
-export function trocarTela(proximaTela) {
+export async function trocarTela(proximaTela, cursoId, cursoNome) {
 
     const main = document.querySelector("main");
-
     main.replaceChildren();
 
     const textoRetorno = document.querySelector("#retorno-telas .sair");
 
-    if (proximaTela === "home") {
-        criarHome();
+    if (proximaTela == "home") {
+
+        const { criarHome } = await import("../criacaoTelaJs/home.js");
+
+        await criarHome(trocarTela);
 
         if (textoRetorno) {
             textoRetorno.textContent = "Sair";
         }
-        
-    } else if (proximaTela === "turma") {
-        criarTurma();
+
+    } else if (proximaTela == "turma") {
+
+        const { criarTurma } = await import("../criacaoTelaJs/turma.js");
+
+        criarTurma(cursoId, cursoNome);
 
         if (textoRetorno) {
             textoRetorno.textContent = "Voltar";
@@ -25,8 +27,6 @@ export function trocarTela(proximaTela) {
 
         const retorno = document.getElementById("retorno-telas");
 
-        retorno.addEventListener("click", () => {
-            trocarTela("home");
-        });
+        retorno.onclick = () => trocarTela("home");
     }
 }

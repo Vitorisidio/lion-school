@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
     .aba-filtros {
-        width: 100vw;
+        width: 100%;
         height: 5.9vh;
         background-color: #BCC2E5;
 
@@ -78,17 +78,87 @@
         border: none;
     }
 
-    .bloco{
+    .bloco {
         display: flex;
-        margin-left: 24px;
-        margin-right: 8px;
+        margin-left: 1.67vw;
+        margin-right: 0.6vw;
 
         background-color: #3347B0;
         box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.5);
-        width: 20px;
-        height: 20px;
+        width: 1.4vw;
+        height: 2.2vh;
     }
 
-    .bloco-amarelo{
+    .bloco-amarelo {
         background-color: #E5B657;
+    }
+
+    .tituloTurma {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 4.46vw;
+        color: #3347B0;
+        font-weight: 500;
+        margin-top: 3.9vh;
+    }
+
+    .lista-alunos {
+        display: flex;
+        width: 86.75vw;
+        margin-top: 4.9vh;
+        margin-left: 6.7vw;
+        margin-right: 6.7vw;
+        margin-bottom: 12.5vh;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 4.276vw;
+    }
+
+    .cardAluno {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #3347B0;
+        width: 13.9vw;
+        height: 39.7vh;
+
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .curso-finalizado{
+        background-color: #E5B657 ;
+    }
+
+    .cardAluno:hover{
+        transform: scale(1.05);
+         box-shadow: 12px 12px 4px 0 rgba(51, 71, 176, 0.5);
+        border: 1px solid black;
+    }
+
+    .foto-aluno {
+        display: flex;
+        width: 11.13vw;
+        height: 21.5vh;
+        margin-top: 2.1vh;
+
+
+        border-radius: 100%;
+    }
+
+    .nome {
+        display: flex;
+        text-align: center;
+        margin-top: 2.15vh;
+        font-family: "Roboto", sans-serif;
+
+        max-width: 12.3vw;
+
+        font-size: 1.25vw;
+        color: white;
+        font-weight: 500;
     }

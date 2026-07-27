@@ -1,20 +1,20 @@
 'use strict'
 
-import { trocarTela } from "../funcoesJs/navegacao.js"
+import { buscarCursos } from "../funcoesJs/api.js";
 
-
-export function criarHome() {
+export async function criarHome(trocarTela) {
 
     const main = document.querySelector("main")
 
     const home = document.createElement("div")
     home.classList.add("main-home")
 
+    const cursos = await buscarCursos()
 
     home.append(
         criarMainEsquerdo(),
         criarEstudante(),
-        criarMainDireito()
+        criarMainDireito(trocarTela, cursos)
     )
 
 
@@ -67,23 +67,23 @@ function criarEstudante() {
     return estudante
 }
 
-function criarMainDireito() {
+function criarMainDireito(trocarTela, cursos) {
 
     const div = document.createElement("div")
     div.classList.add("main-direito")
 
-    div.append(
-        criarBotao(
-            "botao-ds",
-            "img/maio-e-menor.png",
-            "DS",() => trocarTela("turma")
-        ),
-        criarBotao(
-            "botao-redes",
-            "img/redes-icon.png",
-            "REDES",() => trocarTela("turma")
+    cursos.forEach(curso => {
+
+        div.append(
+            criarBotao(
+                curso.id,
+                curso.icon,
+                curso.sigla,
+                () => trocarTela("turma", curso.id, curso.nome)
+            )
         )
-    )
+
+    })
 
     return div
 }

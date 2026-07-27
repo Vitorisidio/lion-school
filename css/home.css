@@ -46,8 +46,7 @@
 
     /******************************** DIREITO *****************************/
 
-    .botao-ds,
-    .botao-redes {
+    .main-direito button{
         display: flex;
         width: 27.8vw;
         height: 23.4vh;
@@ -62,28 +61,24 @@
         transition: 0.3s ease;
     }
 
-    .botao-redes {
+    .main-direito button {
         margin-top: 5.55vh;
     }
 
-    .botao-ds:hover,
-    .botao-redes:hover {
+    .main-direito button:hover{
         transform: scale(1.05);
     }
 
-    .botao-ds:active,
-    .botao-redes:active {
+    .main-direito button:active {
         transform: scale(0.95);
     }
 
-    .botao-ds img,
-    .botao-redes img {
+    .main-direito button img {
         width: 6.66vw;
         height: 8.98vh;
     }
 
-    .botao-ds p,
-    .botao-redes p {
+    .main-direito button p {
         font-size:  4.44vw;
         font-weight: 500;
         padding-left: 1.7vw;
