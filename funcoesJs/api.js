@@ -9,7 +9,7 @@ export async function buscarCursos() {
 
     const cursos = await resposta.json();
 
-    return cursos;
+    return cursos
 }
 
 export async function buscarAlunos(cursoId, status) {
@@ -38,4 +38,14 @@ export async function buscarAlunos(cursoId, status) {
 
     return await resposta.json();
 
+}
+
+export async function buscarAlunosID(alunoId){
+
+    const resposta = await fetch(`https://lion-school-phbo.onrender.com/alunos/${alunoId}`)
+
+    const aluno = await resposta.json();
+
+    return aluno
+    
 }

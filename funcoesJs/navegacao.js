@@ -33,11 +33,9 @@ export async function trocarTela(proximaTela, cursoId, cursoNome, aluno) {
 
         const { criarAluno } = await import("../criacaoTelaJs/aluno.js")
 
-        criarAluno(aluno,cursoId, cursoNome)
+        criarAluno(aluno)
 
-                if (textoRetorno) {
-            textoRetorno.textContent = "Voltar"
-        }
+                
 
         const retorno = document.getElementById("retorno-telas")
 

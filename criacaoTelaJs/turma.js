@@ -122,7 +122,7 @@ function cardAluno(alunos, trocarTela, cursoId, cursoNome) {
         "detalheAluno",
         cursoId,
         cursoNome,
-        aluno
+        aluno.id
     )
 
 })
