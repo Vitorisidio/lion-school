@@ -138,7 +138,7 @@ function cardAluno(alunos, trocarTela, cursoId, cursoNome) {
 
 
         const nome = document.createElement("p")
-        nome.classList.add("nome")
+        nome.classList.add("nome-turma")
         nome.textContent = aluno.nome
 
 

@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /******************************** TELA ALUNO ********************************/
 
 .main-aluno {
 
-    width: 100vw;
     height: 63vh;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 7.34vw;
+    margin-right: 7.34vw;
     margin-top: 8.66vh;
     margin-bottom: 5.2vh;
 
@@ -17,7 +18,7 @@
 
 /******************************** PERFIL ALUNO ********************************/
 
-.turma-esquerdo{
+.turma-esquerdo {
 
     width: 34.77vw;
     height: 55.59vh;
@@ -39,7 +40,7 @@
 .foto {
 
     width: 23vw;
-    height: 27vh;
+    height: 36.79vh;
     border-radius: 50%;
 
     border: 1px solid rgb(0, 0, 0);
@@ -49,20 +50,129 @@
 
 /******************************** NOME ********************************/
 
-.nome {
+.nome-aluno {
 
     margin-top: 3vh;
 
     max-width: 25vw;
 
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 
     font-size: 2vw;
 
-    color: rgb(0, 0, 0);
+    color: #3347B0;
 
-    font-weight: 200;
+    font-weight: 500;
 
     text-align: center;
+
+}
+
+.grafico {
+
+
+    width: 34.77vw;
+    height: 55.59vh;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 0px 20px rgba(51, 71, 176, 0.5);
+
+    gap: 2vw;
+
+}
+
+
+
+
+.coluna-grafico {
+
+    height: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+.porcentagem {
+
+    height: 3vh;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.15vw;
+    font-weight: bold;
+    color: #3347B0;
+    margin-bottom: 2vh;
+}
+
+.porcentagem-amarelo {
+    color: #E5B657;
+}
+
+.porcentagem-vermelho {
+    color: #C11010;
+}
+
+
+/* O copo inteiro */
+.barra {
+
+    width: 1.2vw;
+    height: 30vh;
+
+    background-color: #E5E5E5;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+}
+
+
+.preenchimento {
+
+    width: 100%;
+
+    background-color: #3347B0;
+
+}
+
+.preenchimento-amarelo {
+    background-color: #E5B657;
+    box-shadow:
+        0 0 5px #E5B657,
+        0 0 10px #E5B657,
+        0 0 20px #E5B657,
+        0 0 40px #E5B657;
+}
+
+.preenchimento-vermelho {
+    background-color: #C11010;
+    box-shadow:
+        0 0 5px #C11010,
+        0 0 10px #C11010,
+        0 0 20px #C11010,
+        0 0 40px #C11010;
+}
+
+
+.categoria {
+
+    margin-top: 1vh;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    color: #3347B0;
+    font-weight: bold;
 
 }
