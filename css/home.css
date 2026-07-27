@@ -76,6 +76,7 @@
     .main-direito button img {
         width: 6.66vw;
         height: 8.98vh;
+        filter: invert(1);
     }
 
     .main-direito button p {

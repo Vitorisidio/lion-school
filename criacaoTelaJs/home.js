@@ -76,7 +76,6 @@ function criarMainDireito(trocarTela, cursos) {
 
         div.append(
             criarBotao(
-                curso.id,
                 curso.icon,
                 curso.sigla,
                 () => trocarTela("turma", curso.id, curso.nome)
@@ -88,10 +87,9 @@ function criarMainDireito(trocarTela, cursos) {
     return div
 }
 
-function criarBotao(classe, imagem, texto, acao) {
+function criarBotao(imagem, texto, acao) {
 
     const botao = document.createElement("button")
-    botao.classList.add(classe)
     botao.type = "button"
 
     const img = document.createElement("img")

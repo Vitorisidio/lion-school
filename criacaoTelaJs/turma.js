@@ -2,7 +2,7 @@
 
 import { buscarAlunos } from "../funcoesJs/api.js";
 
-export async function criarTurma(cursoId, curso) {
+export async function criarTurma(cursoId, curso, trocarTela) {
 
     const main = document.querySelector("main")
 
@@ -11,7 +11,7 @@ export async function criarTurma(cursoId, curso) {
     main.append(
         await filtros(atualizarCards),
         tituloTurma(curso),
-        cardAluno(alunos)
+        cardAluno(alunos, trocarTela, cursoId, curso)
     )
 
     async function atualizarCards(status) {
@@ -104,7 +104,7 @@ function tituloTurma(curso) {
 
 }
 
-function cardAluno(alunos) {
+function cardAluno(alunos, trocarTela, cursoId, cursoNome) {
 
     const container = document.createElement("div")
     container.classList.add("lista-alunos")
@@ -115,6 +115,17 @@ function cardAluno(alunos) {
 
         const card = document.createElement("div")
         card.classList.add("cardAluno")
+
+        card.addEventListener("click", () => {
+
+    trocarTela(
+        "detalheAluno",
+        cursoId,
+        cursoNome,
+        aluno
+    )
+
+})
 
         if (aluno.status == "finalizado") {
             card.classList.add("curso-finalizado")
