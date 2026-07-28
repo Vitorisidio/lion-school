@@ -23,7 +23,11 @@ export async function criarTurma(cursoId, curso, trocarTela) {
 
 
         lista.replaceWith(
-            cardAluno(alunosFiltrados)
+            cardAluno(
+                alunosFiltrados,
+                trocarTela,
+                cursoId,
+                curso)
         )
 
     }
@@ -118,14 +122,14 @@ function cardAluno(alunos, trocarTela, cursoId, cursoNome) {
 
         card.addEventListener("click", () => {
 
-    trocarTela(
-        "detalheAluno",
-        cursoId,
-        cursoNome,
-        aluno.id
-    )
+            trocarTela(
+                "detalheAluno",
+                cursoId,
+                cursoNome,
+                aluno.id
+            )
 
-})
+        })
 
         if (aluno.status == "finalizado") {
             card.classList.add("curso-finalizado")

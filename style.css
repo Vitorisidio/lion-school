@@ -156,3 +156,67 @@
         width: auto;
         height: auto;
     }
+
+    @media (max-width: 431px) {
+
+        footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sair {
+            display: none;
+        }
+
+        .rodape-esquerdo {
+            order: 1;
+            margin-left: 0;
+            align-items: center;
+            gap: 2vh;
+            margin-top: 3.2vh;
+        }
+
+        .telefone img,
+        .email img,
+        .gps img {
+            width: 5.75vw;
+        }
+
+        .telefone p,
+        .email p,
+        .gps p {
+            padding-left: 9.5vw;
+        }
+
+        .rodape-direito {
+            display: flex;
+            gap: 6.3vw;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            margin-top: 4.9vh;
+            order: 2;
+
+        }
+
+        .rede-social {
+            width: 15vw;
+            height: 5.4vh;
+        }
+
+        .rede-social img {
+            max-width: 55%;
+            max-height: 55%;
+            width: auto;
+            height: auto;
+        }
+
+        .rodape-meio {
+            font-size: 1.4vh;
+            order: 3;
+            margin-top: 4.9vh;
+            margin-bottom: 4.2vh;
+        }
+
+    }

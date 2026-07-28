@@ -176,3 +176,43 @@
     font-weight: bold;
 
 }
+
+@media (max-width: 431px) {
+
+    .main-aluno {
+        flex-direction: column;
+    }
+
+    .turma-esquerdo {
+
+        width: 63vw;
+        height: 33.5vh;
+
+    }
+
+    .grafico {
+
+        width: 63vw;
+        height: 33.5vh;
+
+}
+.foto {
+
+            width: 49.13vw;
+            height: 17.5vh;
+
+}
+
+
+/******************************** NOME ********************************/
+
+.nome-aluno {
+
+            margin-top: 2.15vh;
+            font-size: 5.7vw;
+            max-width: 38.3vw;
+            justify-content: center;
+
+}
+
+}

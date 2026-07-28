@@ -1,45 +1,64 @@
+let trocandoTela = false;
+
 export async function trocarTela(proximaTela, cursoId, cursoNome, aluno) {
 
+    if (trocandoTela) return;
+
+    trocandoTela = true;
+
     const main = document.querySelector("main");
-    main.replaceChildren()
+    main.replaceChildren();
 
-    const textoRetorno = document.querySelector("#retorno-telas .sair")
+    const textoRetorno = document.querySelector("#retorno-telas .sair");
 
-    if (proximaTela == "home") {
+    try {
 
-        const { criarHome } = await import("../criacaoTelaJs/home.js")
+        if (proximaTela == "home") {
 
-        await criarHome(trocarTela)
+            const { criarHome } = await import("../criacaoTelaJs/home.js");
 
-        if (textoRetorno) {
-            textoRetorno.textContent = "Sair"
+            await criarHome(trocarTela);
+
+            if (textoRetorno) {
+                textoRetorno.textContent = "Sair";
+            }
+
+
+        } else if (proximaTela == "turma") {
+
+            const { criarTurma } = await import("../criacaoTelaJs/turma.js");
+
+            await criarTurma(cursoId, cursoNome, trocarTela);
+
+            if (textoRetorno) {
+                textoRetorno.textContent = "Voltar";
+            }
+
+            const retorno = document.getElementById("retorno-telas");
+
+            retorno.onclick = () => trocarTela("home");
+
+
+        } else if (proximaTela == "detalheAluno") {
+
+            const { criarAluno } = await import("../criacaoTelaJs/aluno.js");
+
+            await criarAluno(aluno);
+
+            if (textoRetorno) {
+                textoRetorno.textContent = "Voltar";
+            }
+
+            const retorno = document.getElementById("retorno-telas");
+
+            retorno.onclick = () => trocarTela("turma", cursoId, cursoNome);
+
         }
 
-    } else if (proximaTela == "turma") {
 
-        const { criarTurma } = await import("../criacaoTelaJs/turma.js")
+    } finally {
 
-        criarTurma(cursoId, cursoNome, trocarTela)
-
-        if (textoRetorno) {
-            textoRetorno.textContent = "Voltar"
-        }
-
-        const retorno = document.getElementById("retorno-telas")
-
-        retorno.onclick = () => trocarTela("home")
-
-    }else if( proximaTela == "detalheAluno"){
-
-        const { criarAluno } = await import("../criacaoTelaJs/aluno.js")
-
-        criarAluno(aluno)
-
-                
-
-        const retorno = document.getElementById("retorno-telas")
-
-        retorno.onclick = () => trocarTela("turma", cursoId, cursoNome)
+        trocandoTela = false;
 
     }
 }

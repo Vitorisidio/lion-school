@@ -3,8 +3,8 @@
 
     /******************************** ESQUERDO *****************************/
 
-  .main-home{
-                
+    .main-home {
+
         margin-top: 7.8vh;
         margin-left: 6.67vw;
         margin-right: 6.67vw;
@@ -14,9 +14,9 @@
 
         display: flex;
         justify-content: space-between;
-  }
-  
-  /******************************** ESQUERDO *****************************/
+    }
+
+    /******************************** ESQUERDO *****************************/
     .titulo {
         font-size: calc(2.5vw + 3.27vh);
         font-family: "Roboto", sans-serif;
@@ -46,7 +46,7 @@
 
     /******************************** DIREITO *****************************/
 
-    .main-direito button{
+    .main-direito button {
         display: flex;
         width: 27.8vw;
         height: 23.4vh;
@@ -65,7 +65,7 @@
         margin-top: 5.55vh;
     }
 
-    .main-direito button:hover{
+    .main-direito button:hover {
         transform: scale(1.05);
     }
 
@@ -80,10 +80,58 @@
     }
 
     .main-direito button p {
-        font-size:  4.44vw;
+        font-size: 4.44vw;
         font-weight: 500;
         padding-left: 1.7vw;
         font-family: "Roboto", sans-serif;
         color: white;
     }
 
+    @media (max-width: 431px) {
+
+        .main-home {
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /******************************** ESQUERDO *****************************/
+        .titulo {
+            font-size: 10vw;
+            text-align: center;
+            width: 100vw;
+        }
+
+        .computadores {
+            display: none;
+        }
+
+        /******************************** MEIO *****************************/
+        .estudante {
+            width: 60.63vw;
+            height: 43.5vh;
+            margin-top: 6vh;
+
+        }
+
+        /******************************** DIREITO *****************************/
+
+
+        .main-direito button {
+            margin-top: 5.55vh;
+            margin-bottom: 5.55vh;
+            width: 55vw;
+            height: 19.56vh;
+        }
+
+        .main-direito button img {
+            display: none;
+        }
+
+        .main-direito button p {
+            font-size: 15vw;
+        }
+
+    }

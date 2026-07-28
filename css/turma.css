@@ -130,13 +130,13 @@
         transition: 0.3s ease;
     }
 
-    .curso-finalizado{
-        background-color: #E5B657 ;
+    .curso-finalizado {
+        background-color: #E5B657;
     }
 
-    .cardAluno:hover{
+    .cardAluno:hover {
         transform: scale(1.05);
-         box-shadow: 12px 12px 4px 0 rgba(51, 71, 176, 0.5);
+        box-shadow: 12px 12px 4px 0 rgba(51, 71, 176, 0.5);
         border: 1px solid black;
     }
 
@@ -161,4 +161,71 @@
         font-size: 1.25vw;
         color: white;
         font-weight: 500;
+    }
+
+
+    @media (max-width: 431px) {
+
+        .status {
+            font-size: 5vw;
+        }
+
+        .opcoes {
+            left: 9.6vw;
+            width: 28.43vw;
+            max-height: 13vh;
+        }
+
+        .opcoes p {
+            font-size: 5vw;
+
+        }
+
+        .legenda {
+            font-size: 3vw;
+
+
+            margin-right: 6.68vw;
+
+            background: none;
+            border: none;
+        }
+
+        .bloco {
+            width: 3vw;
+            height: 1.2vh;
+        }
+
+        .tituloTurma {
+            text-align: center;
+            font-size: 7.85vw;
+            margin-top: 12.9vh;
+        }
+
+        .lista-alunos {
+            flex-direction: column;
+            align-items: center;
+            gap: 13.7vw;
+        }
+
+        .cardAluno {
+
+            width: 63vw;
+            height: 33.5vh;
+
+        }
+
+        .foto-aluno {
+            display: flex;
+            width: 49.13vw;
+            height: 17.5vh;
+        }
+
+        .nome-turma {
+            margin-top: 2.15vh;
+            font-size: 5.7vw;
+            max-width: 32.3vw;
+            justify-content: center;
+        }
+
     }
