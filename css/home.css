@@ -5,7 +5,7 @@
 
     .main-home {
 
-        margin-top: 7.8vh;
+        margin-top: 10.4vh;
         margin-left: 6.67vw;
         margin-right: 6.67vw;
 
@@ -18,7 +18,7 @@
 
     /******************************** ESQUERDO *****************************/
     .titulo {
-        font-size: calc(2.5vw + 3.27vh);
+        font-size: calc(2.5vw + 2.27vh);
         font-family: "Roboto", sans-serif;
         color: rgb(0, 0, 0);
         font-weight: lighter;
@@ -40,16 +40,23 @@
     .estudante {
         width: 17.85vw;
         height: 49.674vh;
-        margin-top: 12px;
+        margin-top: 1.34vh;
 
     }
 
     /******************************** DIREITO *****************************/
 
+    .main-direito{
+            display: flex;
+            flex-direction: column;
+            gap: 5.6vh;
+    }
+
     .main-direito button {
         display: flex;
         width: 27.8vw;
         height: 23.4vh;
+
         background-color: #3347B0;
         justify-content: center;
         align-items: center;
@@ -59,10 +66,6 @@
         border: none;
         cursor: pointer;
         transition: 0.3s ease;
-    }
-
-    .main-direito button {
-        margin-top: 5.55vh;
     }
 
     .main-direito button:hover {
