@@ -174,7 +174,9 @@
 @media (max-width: 431px) {
 
     .main-aluno {
+        height: auto;
         flex-direction: column;
+        margin-top: 10.5vh;
         margin-bottom: 14.5vh;
     }
 
