@@ -57,7 +57,7 @@ function criarMainDireita(desempenho) {
 
         const porcentagem = document.createElement("p")
         porcentagem.classList.add("porcentagem")
-        porcentagem.textContent = `${item.valor}%`
+        porcentagem.textContent = `${item.valor}`
 
         const barra = document.createElement("div")
         barra.classList.add("barra")

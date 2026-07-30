@@ -46,6 +46,7 @@
 
     .voltar {
         height: 3.34vh;
+        cursor: pointer;
     }
 
     .cabecalho-direito {
@@ -62,6 +63,7 @@
         color: white;
         width: 75px;
         padding-left: 11px;
+        cursor: pointer;
     }
 
     /******************************** MAIN *****************************/
