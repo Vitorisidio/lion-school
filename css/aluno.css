@@ -175,7 +175,7 @@
 
     .main-aluno {
         flex-direction: column;
-        margin-bottom: 8.1vh;
+        margin-bottom: 14.5vh;
     }
 
     .turma-esquerdo {
@@ -204,7 +204,7 @@
 
         width: 63vw;
         height: 33.5vh;
-        margin-top: 59px;
+        margin-top: 10vh;
         gap: 10.2vw;
         box-shadow: none;
 
